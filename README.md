@@ -227,7 +227,6 @@ a:focus {
 }
 ```
 
-
 A pseudo elements are similar to pseudo classes but this time we use :: to be added at the end of selectors
 ```html
 /* All elements with an attribute "href" with values
@@ -237,5 +236,58 @@ A pseudo elements are similar to pseudo classes but this time we use :: to be ad
   content: '⤴';
 }
 ```
+
+#### Combinators
+Using one selector at a time is useful but can be inefficient. CSS has several ways to select elements based on how they are related to one another. Expressed via cominators
+
+[refer to example on combinators.html]
+
+Groups of selectors on one rule.
+We can write groups of selectors separated by commas to apply the same rule to muiltiple sets of select elements at once
+```html
+h1, h2, h3, h4, h5, h6 {
+  font-family: helvetica, 'sans serif';
+}
+```
+
+There's quite a lot on selectors! Refer back to this [link](https://https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectorsduckduckgo.com) if trouble ever arises with this concept!!
+
+
+
+## 4 CSS values and units
+There are many types of property values to consider. Below are common ones (not all of them)
+
+#### numeric values
+Length and size (<length> for reference)
+```html
+  p {
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: cyan;
+}
+```
+Pixels are considered an absolute unit (always the same size) but it is possible to use other measurements like cm, mm, in, pt, pc. But it is highly unlikely to be used
+
+
+Another thing to consider are **relative units**
+A one that is commonly used in web development is em:lem
+The default base font-size by web browsers is 16 pixels. The computer value of 1em is 16 pixels by default. It uses inheritance and the parent element determines that it is 16
+
+Unitless values
+```html
+margin: 0;
+```
+If we want to remove the margin or padding from an element we can just use 0
+
+Number of animations
+(refer to example in index.html)
+
+#### percentages
+
+
+
+
+
 
 
