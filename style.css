@@ -1,0 +1,79 @@
+*{
+  font-family:
+}
+
+.kevin {
+
+}
+
+h1 {
+  color: blue;
+  background-color: black;
+  border: 1px solid black;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+p {
+  color: red;
+  width: 100px;
+  font-size: 40px;
+  transform-origin: center;
+}
+
+p:hover {
+  animation-name: rotate;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-iteration-count: 5;
+}
+
+/* All elements with the attribute "data-vegetable"
+   are given green text */
+[data-vegetable] {
+  color: green;
+}
+
+/* All elements with the attribute "data-vegetable"
+   with the exact value "liquid" are given a golden
+   background color */
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+}
+
+/* All elements with the attribute "data-vegetable",
+   containing the value "spicy", even among others,
+   are given a red text color */
+[data-vegetable~="spicy"] {
+  color: red;
+}
+/* These styles will style our link
+   in all states */
+a {
+  color: blue;
+  font-weight: bold;
+}
+
+/* We want visited links to be the same color
+   as non visited links */
+a:visited {
+  color: blue;
+}
+
+/* We highlight the link when it is
+   hovered over (mouse over), activated (mouse down)
+   or focused (keyboard) */
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
