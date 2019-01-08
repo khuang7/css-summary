@@ -132,7 +132,59 @@ Comments: Use /* comment */ for useful guide
 ## 2 Selectors
 
 #### Simple Selector
-Type Selector
+Type Selector (aka element selectors)
+Basically a case insensitive match between selector name and a given html element name.
+This is basically what is shown before
 
+Class Selectors
+dot '.' followed be class name.
+Class attributes, where we can choose the name of the class. 
+Multiple eleents in a document can have the same class value and a single element can have multiple class names
 
+```html
+<ul>
+  <li class="first done">Create an HTML document</li>
+  <li class="second done">Create a CSS style sheet</li>
+  <li class="third">Link them all together</li>
+</ul>
 
+/* The element with the class "first" is bolded */
+.first {
+  font-weight: bold;
+}
+
+/* All the elements with the class "done" are strikethrough */
+.done {
+  text-decoration: line-through;
+}
+```
+
+ID Selectors
+These consists of a hash symbol followed by the ID name of the given element.
+ID MUST BE UNIQUE, duplicate ID result in unpredictable behaviour
+
+```html
+<p id="polite"> — "Good morning."</p>
+<p id="rude"> — "Go away!"</p>
+
+#polite {
+  font-family: cursive;
+}
+#rude {
+  font-family: monospace;
+  text-transform: uppercase;
+}
+```
+
+Universal Selector
+The ultimate joker. Allows selecting all elements on page and is often used in combination with out selectors.
+
+```html
+* {
+  padding: 5px;
+  border: 1px solid black;
+  background: rgba(255,0,0,0.25)
+}
+```
+
+#### Attribute Selectors
