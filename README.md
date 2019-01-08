@@ -131,7 +131,8 @@ Comments: Use /* comment */ for useful guide
 
 ## 2 Selectors
 
-
+#### Simple Selector
+Type Selector
 
 
 
