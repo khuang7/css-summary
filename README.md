@@ -188,3 +188,54 @@ The ultimate joker. Allows selecting all elements on page and is often used in c
 ```
 
 #### Attribute Selectors
+Selectors that match an exact attribute value
+``` /* All elements with the attribute "data-vegetable"
+   are given green text */
+[data-vegetable] {
+  color: green;
+}
+
+/* All elements with the attribute "data-vegetable"
+   with the exact value "liquid" are given a golden
+   background color */
+[data-vegetable="liquid"] {
+  background-color: goldenrod;
+}
+
+/* All elements with the attribute "data-vegetable",
+   containing the value "spicy", even among others,
+   are given a red text color */
+[data-vegetable~="spicy"] {
+  color: red;
+}
+```
+
+Substring value attributes selectors
+These are sort of like regex selectors as they offer flexible matching similar to regular expressions. However they are NOT TRUE REGEX.
+
+
+#### Pseudo-classes
+These selectors don't select elements but rather certain parts of elements. The types are: pseudo classes, pseudo elements
+
+A pseudo class is a keyword added to the end of a selector preceded by a colon. Used to specific that you want to style the select element when it is in a certain state. For example only access when being pointed over by the mouse pointer.
+```html
+a:hover,
+a:active,
+a:focus {
+  color: darkred;
+  text-decoration: none;
+}
+```
+
+
+A pseudo elements are similar to pseudo classes but this time we use :: to be added at the end of selectors
+```html
+/* All elements with an attribute "href" with values
+   starting with "http" will have an arrow added after their
+   content (to indicate they are external links) */
+[href^=http]::after {
+  content: '⤴';
+}
+```
+
+
