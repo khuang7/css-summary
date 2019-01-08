@@ -114,6 +114,24 @@ How do we tell our declaration block which elements they should be applied to.
 We do so via the SELECTOR, a pattern that matches some elements on the page. The associated declarations will be applied to those elements only. 
 
 #### CSS statements
-up to here https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax
+At-rules are used to convey metadata, conditional information or other descriptive info
+```html
+@media (min-width: 801px) {
+  body {
+    margin: 0 auto;
+    width: 800px;
+  }
+}
+```
+The media applies to a browser that matches a specific 800 pixel condition
+
+#### Readability
+White spaces: Used to make the code more readable, css ignores white space
+Comments: Use /* comment */ for useful guide
+
+## 2 Selectors
+
+
+
 
 
