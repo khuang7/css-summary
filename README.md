@@ -284,8 +284,34 @@ Number of animations
 (refer to example in index.html)
 
 #### percentages
+An example is boxes whose width will always shift to be a certain percentage of hteir parent container width. 
 
+#### colours
+The standard colour system uses RGB. And a combination of 16.7 million colours are possible due to the different combinations possible. 256 x 256 x 256. RGB(255,0,0) == all red
 
+Hexadecimal values are also possible which is written as #ff0000
+
+Furthermore there are other things such as RGBA, HSLA which deals with transparency. Or rgba(255,0,0,0.5) to specify opacity
+
+#### functions
+Similar to any programming language. 
+```css
+background-color: rgba(255,0,0,0.5);
+background-color: hsla(240,100%,50%,0.5);
+```
+
+```css
+/* calculate the new position of an element after it has been rotated by 45 degress */
+transform: rotate(45deg);
+/* calculate the new position of an element after it has been moved across 50px and down 60px */
+transform: translate(50px, 60px);
+/* calculate the computed value of 90% of the current width minus 15px */
+width: calc(90% - 15px);
+/* fetch an image from the network to be used as a background image */
+background-image: url('myimage.png'); 
+/* create a gradient and use it as a background image */ 
+background-image: linear-gradient(to left, teal, aquamarine);
+```
 
 
 
