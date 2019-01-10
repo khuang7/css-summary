@@ -313,7 +313,55 @@ background-image: url('myimage.png');
 background-image: linear-gradient(to left, teal, aquamarine);
 ```
 
+## 4 Cascade and Inheritance
+There are cases when multiple CSS rules will have selectors matching the same element. So which CSS rule wins? This is determined by the cascade
+
+1. Importance
+2. Specificity
+3. Source Order
+
+#### importance
+AN example in action
+```html
+<p class="better">This is a paragraph.</p>
+<p class="better" id="winning">One selector to rule them all!</p>
+```
+
+```css
+#winning {
+  background-color: red;
+  border: 1px solid black;
+}
+
+.better {
+  background-color: gray;
+  border: none !important;
+}
+
+p {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+}
+```
+
+Following this example above
+1. The third rule has padding and colour is applied. However background colour is not applied (overriden by previous rule)
+2. The rules above win, because ID/Class selectors have higher specificity than element selectors
+3. Both elements have a class of better. The second class also has winning too. ID has a higher specifity compared than classes.  
+4. The second element does get the red colour. Because of the !important declaration
 
 
+if ! importance is used then this will ALWAYS WIN over the others but it is recommended not to use this because it makes debugging pretty hard
+
+#### Specificity
+How many elements it could match. 
+
+
+
+## 5 Box Model
+
+
+## 6 CSS Layout
 
 
