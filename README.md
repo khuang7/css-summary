@@ -355,9 +355,7 @@ Following this example above
 if ! importance is used then this will ALWAYS WIN over the others but it is recommended not to use this because it makes debugging pretty hard
 
 #### Specificity
-How many elements it could match. 
-
-
+How many elements it could match.
 
 ## 5 Box Model
 
