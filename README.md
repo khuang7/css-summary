@@ -419,5 +419,117 @@ Some examples of background manipulation are
 Skipping this as its just extra css things to design stuff.
 
 ## 6 CSS Layout
+CSS page layout techniques allow us to take elements contained in a webpage and control where they are positioned relative to their default position in normal layout flow. 
+
+#### normal flow
+```html
+<p>I love my cat.</p>
+    
+<ul>
+  <li>Buy cat food</li>
+  <li>Exercise</li>
+  <li>Cheer up friend</li>
+</ul>
+    
+<p>The end!</p>
+```
+The html for this appears in the exact order in which it appears in the source code. Elements are stacked up on top of each other. First paragraph -> unordered list -> second paragraph
+
+The elements that appear one below the other are block elements. Not inline elements where they appear beside each other.
+
+When creating a CSS, we are moving elements away from the normal flow. Some methods are able to change how elements are laid out in CSS
+
+**Display properties**
+Everything in normal flow has a value of display. The default way that elements behave.
+For example paragraphs in english display below one another. due to the fact display:block.
+But if we put a link inside some text inside a paragraph. The link remains inline because <a> is display:inline by default
+
+**flexbox**
+display: flex on the parent element of the elements we want to layout. Then all children become flex items.
+
+```css
+.wrapper {
+  display: flex;
+}
+```
+
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+</div>
+```
+
+The default flex-direction is row which is why they appear as 3 columns.
+The default align-items makes it stretch to the height of the tallest item.
+```css 
+.wrapper > div {
+    flex: 1;
+}
+```
+We can make all the children item set with a value of 1, which causes items to grow and fill the container.
+
+**grid layout**
+Two dimensional layout (unlike flexbox which is for 1 dimension)
+display:grid
+We define the rows and columns using grid-template-rows and grid-template-columns.
+```css
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    grid-gap: 10px;
+}
+```
+
+```html
+<div class="wrapper">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three</div>
+    <div class="box4">Four</div>
+    <div class="box5">Five</div>
+    <div class="box6">Six</div>
+</div>
+```
+
+We can explcitiy place items in each grid and position them to our will
+```css
+.box1 {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+.box2 {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.box3 {
+    grid-row: 2;
+    grid-column: 3;
+}
+```
+
+**floats**
+Used for putting images inside a piece of text. Floating an element changes the behaviour of the element and the block level elements that follow it in normal flow.
+- left
+- right
+- none
+- inherit
+
+**positioning techniques**
+Allows us to move an element from where it would be placed when normal flow to another location. Used for fine tuning the position of specific items on the page
+
+- static
+- relative
+- absolute
+- fixed
+- sticky
+
+
+**table layout**
+**multi column layout**
 
 
