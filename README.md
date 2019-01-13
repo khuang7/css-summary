@@ -355,10 +355,68 @@ Following this example above
 if ! importance is used then this will ALWAYS WIN over the others but it is recommended not to use this because it makes debugging pretty hard
 
 #### Specificity
-How many elements it could match.
+Specificity means how specific a selector is == how many elements it could match
+Class elements have high specificity so they will win against against class selectors which have low specificity
+ID specifiers have an even high specificity than both
+
+**!important > id > class > element**
+
+Specificity is actually measured via a sort of numeric system. More details on this [link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
+
+1. 1000s = inline style attributes
+2. 100s = For each ID selector contained inside the overall selector
+3. 10s = For each class , attribute, pseudo class inside the overall selector
+4. 1s = Each element or pseudo element selector inside the overall selector
+
+#### source order
+If the selectors have the same importance AND the same specificity, the third factor is the source order. 
+Later rules > Earlier rules
+
+#### inheritance
+TODO
 
 ## 5 Box Model
 
+#### Box Properties
+Every element within a document is structured as a rectangular box. With properties that can be altered
+1. Width and height
+2. Padding, don't forget padding-bottom which can set one side. (Width of the padding)
+3. Border
+4. Margin is the outer area surrounding the CSS box, which pushes against other CSS boxes
+
+When two boxes touch against each other, the distance between them is the largest of the two touching margins (not the sume of both.
+
+#### overflow
+When setting the size of a box with absolute values. The content might not fit within the allowed size. In which case the content will overflow the box.
+We can control what happens when an overflow happens.
+- Auto: the overflowed content is hidden and scroll bars are shown to let the user scroll to see all content
+- Hidden: Overflow content is hidden
+- Visible: Overflow content is shown outside the box.
+
+#### Background clip
+Box backgrounds are made of colors and images, stacked on top of each other (colour, image). 
+We can use background-clip property on the box to control how far the background extends.
+
+#### outline
+A border that is not part of the box model. It is drawn on top of the box without changing the size of the box.
+
+#### advanced box properties
+[advanced properties] (https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap#Advanced_box_properties) just go through this site if needed to modify boxes more.
+
+#### backgrounds
+A background sits underneath an element's content, padding and border.
+The background doesn't sit underneath the margin. Margin doesn't count as part of the element's area, but rather the area outside the element.
+
+Some examples of background manipulation are
+1. background-color
+2. background-image
+3. background-repeat, specificy how image is repeated
+4. background-position, position an image wherever you want inside the background.
+5. background attachments, determine how a background scrolls when the content scrolls. (scroll, fixed, local)
+6. background-size, dynamically alter size to fit better
+
+#### borders and tables and advanced stuff
+Skipping this as its just extra css things to design stuff.
 
 ## 6 CSS Layout
 
